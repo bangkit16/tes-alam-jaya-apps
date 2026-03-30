@@ -1,6 +1,6 @@
-# Aplikasi Manajemen Inventaris Alam Jaya Textile
+# Aplikasi Mobile Manajemen Inventaris Alam Jaya Textile
 
-Aplikasi **Alam Jaya Textile** adalah sebuah aplikasi mobile yang dibuat menggunakan React Native (Expo) untuk mempermudah manajemen stok dan data barang/inventaris textile.
+Aplikasi **Alam Jaya Textile (Mobile)** adalah sebuah aplikasi mobile yang dibuat menggunakan React Native (Expo) untuk mempermudah manajemen stok dan pendataan barang/inventaris textile.
 
 ## 🚀 Fitur Aplikasi
 
@@ -49,6 +49,13 @@ Setelah server berjalan, sebuah QR Code akan muncul di terminal. Pilih salah sat
 - **Menggunakan Android Emulator**: Tekan tombol `a` pada command/terminal jika emulator Android telah terbuka.
 - **Menggunakan iOS Simulator (khusus Mac OS)**: Tekan tombol `i` pada terminal jika Xcode Simulator terbuka.
 
+### User untuk login
+
+```bash
+email : admin@gmail.com
+password : password
+```
+
 ---
 
 ## 📖 Cara Penggunaan Aplikasi (Use Case)
@@ -60,3 +67,7 @@ Setelah server berjalan, sebuah QR Code akan muncul di terminal. Pilih salah sat
 3. **Penggunaan QR Scanner**: Ketuk ikon atau tombol kamera/Scan, arahkan kamera ke QR code fisik suatu barang (biasanya menempel pada barang). Aplikasi akan membaca kode dan secara rinci masuk ke halaman barang terkait.
 4. **Detail & Edit**: Melalui menu detail, Anda dapat memperbarui informasi (misalnya ada penambahan Stok) atau bahkan mencetak/menampilkan QR code barang tersebut.
 5. **Logout**: Tekan tombol Logout jika sesi/penggunaan aplikasi telah beres untuk menjaga keamanan data.
+
+---
+
+**Bangkit Maulana Caniago - Tes Alam Jaya Textile - Apps**
