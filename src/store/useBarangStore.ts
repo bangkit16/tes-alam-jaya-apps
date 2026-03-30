@@ -64,7 +64,6 @@ export const useProductStore = create<ProductStore>((set, get) => ({
   },
 
   detailProductByCode: (kode_barang: string) => {
-    // return (get() as { products: barangType[] }).products.find((p) => p.kode_barang === kode_barang) || null;
     return get().products.find((p) => p.kode_barang === kode_barang)?.id || null;
   },
 }));

@@ -4,7 +4,7 @@ import { loginType } from "@/schema/auth";
 const INITIAL_USER = [
   {
     email: 'admin@gmail.com',
-    password: 'password', // secara nyata ini harus di hash
+    password: 'password', 
   },
 ];
 
@@ -24,30 +24,29 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
 
   login: (data: loginType) => {
     const { users } = get();
-    // Cari user yang match email dan passwordnya
     const userFound = users.find(
       (u) => u.email === data.email && u.password === data.password
     );
 
     if (userFound) {
       set({ isLoggedIn: true, user: { email: userFound.email } });
-      return true; // Berhasil login
+      return true; 
     }
     
-    return false; // Gagal login
+    return false; 
   },
 
   register: (data: loginType) => {
     const { users } = get();
-    // Cek apakah email sudah terdaftar
+    
     const userExists = users.some((u) => u.email === data.email);
     if (userExists) {
-      return false; // Email sudah digunakan
+      return false;
     }
 
     // Tambahkan user baru
     set({ users: [...users, data] });
-    return true; // Berhasil mendaftar
+    return true; 
   },
 
   logout: () => {

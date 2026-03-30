@@ -2,13 +2,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Text as TextShad } from '@/components/ui/text';
 import { registerSchema, registerType } from '@/schema/auth';
+import { useAuthStore } from '@/store/useAuthStore';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Controller, useForm } from 'react-hook-form';
 import { KeyboardAvoidingView, Platform, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useAuthStore } from '@/store/useAuthStore';
 import Toast from 'react-native-toast-message';
 
 export default function RegisterScreen() {
@@ -21,12 +21,10 @@ export default function RegisterScreen() {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(registerSchema),
-    defaultValues: {  email: '', password: '', confirmPassword: '' },
+    defaultValues: { email: '', password: '', confirmPassword: '' },
   });
 
   const onSubmit = (data: registerType) => {
-    // Karena registerType memiliki confirmPassword, sedangkan useAuthStore.register hanya meminta loginType,
-    // kita cukup pastikan yang di-passing sesuai expected parameter type (misal tanpa confirmPassword).
     const { email, password } = data;
     const success = register({ email, password });
 

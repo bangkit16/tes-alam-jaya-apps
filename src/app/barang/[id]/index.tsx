@@ -72,7 +72,6 @@ export default function Edit() {
 
   const handleDelete = () => {
     if (itemToDelete) {
-      console.log('Menghapus item dengan ID:', itemToDelete);
       deleteMutation(itemToDelete);
     }
   };

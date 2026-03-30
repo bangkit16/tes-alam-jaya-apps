@@ -52,8 +52,6 @@ export default function Edit() {
   });
 
   const onSubmit = (data: barangType) => {
-    console.log('Data Barang:', data);
-    // setDataBarang(data);
     mutate(data);
   };
 

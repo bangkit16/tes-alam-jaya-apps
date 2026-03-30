@@ -3,21 +3,16 @@ import { Input } from '@/components/ui/input';
 import { Text as TextShad } from '@/components/ui/text';
 import { loginSchema, loginType } from '@/schema/auth';
 import { useAuthStore } from '@/store/useAuthStore';
-import { zodResolver } from '@hookform/resolvers/zod'; // Tambah ini
+import { zodResolver } from '@hookform/resolvers/zod';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
-import { Controller, useForm } from 'react-hook-form'; // Tambah ini
+import { Controller, useForm } from 'react-hook-form';
 import { KeyboardAvoidingView, Platform, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 
 export default function LoginScreen() {
   const { login } = useAuthStore();
-  const [loginState, setLoginState] = useState<loginType>({
-    email: '',
-    password: '',
-  });
   const router = useRouter();
 
   const {
@@ -113,7 +108,7 @@ export default function LoginScreen() {
                 {/* TOMBOL LOGIN */}
                 <Button
                   className='h-auto px-6 py-3 rounded shadow-lg'
-                  onPress={handleSubmit(onSubmit)} // Hubungkan ke handleSubmit
+                  onPress={handleSubmit(onSubmit)}
                 >
                   <TextShad className='text-xl font-poppins'>Login</TextShad>
                 </Button>
